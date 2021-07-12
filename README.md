@@ -1,20 +1,20 @@
-这是一个使用 Node.js、RxJS 以及 TypeScript 语言实现的 GitHub 邮箱爬虫，它可以爬取指定用户所有 Follower 的邮箱。它使用了 RxJS 来提高程式的稳定性：
+This is a GitHub mailbox crawler implemented using Node.js, RxJS, and TypeScript language. It can crawl the mailboxes of all Followers of a specified user. It uses RxJS to improve the stability of the program:
 
-* 使用 Rx 操作符进行容错处理；
-* 对全局请求了进行频率控制。
+* Use Rx operator for fault tolerance processing;
+* Frequency control is performed on the global request.
 
-使用方法：更新 [config.ts](src/config.ts) 里的配置，
+Usage: update the configuration in [config.ts](src/config.ts),
 
 ```
-// 你在 GitHub 网站的 Cookie
+// your cookies on the GitHub website
 const COOKIE: string[] = [
   '',
 ];
 
-// 要爬取 Follower 邮箱的指定用户
+// To crawl the specified user of the Follower mailbox
 const TARGET_USERS: string[] = [
   '',
 ]
 ```
 
-然后执行 `yarn start` 即可。
+Then execute `yarn start`.
